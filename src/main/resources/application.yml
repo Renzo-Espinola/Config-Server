@@ -8,4 +8,4 @@ spring:
     config:
       server:
         git:
-          uri: git@github.com:Renzo-Espinola/spring-cloud-configuration.git
+          uri: https://github.com/Renzo-Espinola/spring-cloud-configuration
