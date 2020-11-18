@@ -1,25 +1,22 @@
+---
 server:
-  port: ${PORT:8888}
-
+  port: 8090
 spring:
-  profiles:
-    active: devs, Qa
   application:
     name: config-server
   cloud:
     config:
-      server:
-        git:
-          uri: https://github.com/Renzo-Espinola/spring-cloud-configuration
-          search-paths: foo,bar*
-          clone-on-start: true
       allow-override: true
       fail-fast: true
       override-none: true
       override-system-properties: false
-
-
-    security:
-      user:
-        name: admin
-        password: admin
+      server:
+        git:
+          clone-on-start: true
+          uri: "https://github.com/Renzo-Espinola/spring-cloud-configuration"
+  profiles:
+    active: "dev, qa"
+  security:
+    user:
+      name: admin
+      password: admin
